@@ -1,0 +1,17 @@
+{
+  "name": "mseemann.github.io",
+  "homepage": "https://github.com/mseemann/mseemann.github.io",
+  "authors": [
+    "Michael Seemann <seemann@mseemann.de>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
