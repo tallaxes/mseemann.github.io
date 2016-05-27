@@ -2,8 +2,9 @@
 layout: default
 ---
 
-<div class="home">
+<div class="row">
 
+	<div class="col-md-8">
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
@@ -17,9 +18,13 @@ layout: default
       </li>
     {% endfor %}
   </ul>
-
+</div>
 
 <div class="col-md-4">
             {% include sidebar-popular-repo.html %}
-        </div>
+			<a href="http://stackoverflow.com/users/2688545/michael">
+			<img src="http://stackoverflow.com/users/flair/2688545.png?theme=clean" width="208" height="58" alt="profile for michael at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for michael at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+			</a>
 </div>
+</div>
+
