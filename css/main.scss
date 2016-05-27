@@ -7,19 +7,25 @@
 
 $font-family-sans-serif:	"Roboto", sans-serif;
 $font-family-serif:			"Roboto", serif;
+
 $brand-primary:				#3097d1;
 
 $navbar-border-radius: 		0;
 
+$btn-font-weight: 			300;
+
+$card-border-color: 		#d3e0e9;
+
 //own variabled
+$background-color:	#f5f8fa;
 $grey-color:				#828282;
 
-body{
-	padding-top: 54px;
-}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+		"../bower_components/bootstrap/scss/bootstrap",
+		"../bower_components/bootstrap/scss/bootstrap-grid",
         "defaults",
-		"../bower_components/bootstrap/scss/bootstrap-flex"
+		"ms"
 ;
+

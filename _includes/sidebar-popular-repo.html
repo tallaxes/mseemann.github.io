@@ -1,32 +1,40 @@
-<h3 class="sidebar-title">My Popular Repositories</h3>
+<h5>My GitHub Repositories</h5>
 {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse | where: "fork", "false" %}
 {% for repo in sorted_repos | limit: site.side_bar_repo_limit %}
-<div class="card text-center">
-    <div class="thumbnail">
-        <div class="card-image geopattern" data-pattern-id="{{ repo.name }}">
-            <div class="card-image-cell">
-                <h3 class="card-title">
-                    <a href="{{ repo.html_url }}" class="btn btn-secondary" target="_blank">{{ repo.name }}</a>
-                </h3>
-            </div>
-        </div>
-        <div class="caption">
-            <div class="card-description">
-                <p class="card-text">{{ repo.description }}</p>
-            </div>
-            <div class="card-text">
-                <span data-toggle="tooltip" class="meta-info" title="{{ repo.stargazers_count }} stars">
-                    <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}
-                </span>
-                <span data-toggle="tooltip" class="meta-info" title="{{ repo.forks_count }} forks">
-                    <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
-                </span>
-                <span data-toggle="tooltip" class="meta-info" title="Last updated：{{ repo.updated_at }}">
-                    <span class="octicon octicon-clock"></span>
-                    <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at }}">{{ repo.updated_at | date: '%Y-%m-%d' }}</time>
-                </span>
-            </div>
-        </div>
-    </div>
+<div class="card">
+	<div class="card-block">
+
+		<h5 class="card-title">{{ repo.name }}</h5>
+		<div class="card-subtitle">{{ repo.description }}</div>
+
+
+		
+		<div class="card-text">
+            <span data-toggle="tooltip" class="meta-info" title="{{ repo.stargazers_count }} stars">
+                <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}
+            </span>
+            <span data-toggle="tooltip" class="meta-info" title="{{ repo.forks_count }} forks">
+                <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
+            </span>
+            <span data-toggle="tooltip" class="meta-info" title="Last updated：{{ repo.updated_at }}">
+                <span class="octicon octicon-clock"></span>
+                <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at }}">{{ repo.updated_at | date: '%Y-%m-%d' }}</time>
+            </span>
+		</div>
+	
+        
+		<div class="row">
+			<div class="col-md-4">
+				<a href="https://travis-ci.org/{{site.github_username}}/{{repo.name}}">
+					<img src="http://img.shields.io/travis/{{site.github_username}}/{{repo.name}}.svg?style=flat">
+				</a>
+			</div>
+			<div class="col-md-8 text-right">
+				<a href="{{ repo.html_url }}" class="btn btn-default" target="_blank">View at github</a>
+			</div>
+		</div>
+		
+
+	</div>
 </div>
 {% endfor %}
