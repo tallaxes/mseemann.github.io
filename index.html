@@ -5,14 +5,14 @@ layout: default
 <div class="row">
 
 	<div class="col-md-8">
-  <h5>Posts</h5>
+
 
   <div class="post-list">
     {% for post in site.posts %}
       <div class="card">
 		  <div class="card-block">
 			 <div class="card-title">
-				 {{ post.title }}
+				 <h5>{{ post.title }}</h5>
 				</div>
 			<div class="card-text">
 				{{ post.excerpt}}
@@ -28,11 +28,24 @@ layout: default
 
 <div class="col-md-4">
 
+<div class="card profile">
+	<div class="card-block">
+
+		<div class="card-title">
+			
+		</div>
+		<img src="{{site.github.owner_gravatar_url}}">
+		<h5>{{ site.title }} </h5>
+		<div class="card-subtitle">{{site.sub_title}}</div>
+	</div>
+</div>
+
     {% include sidebar-popular-repo.html %}
 			
+
+	<h5 class="card-title">My Stackoverflow Profile</h5>
 	<div class="card">
 		<div class="card-block">
-			<h5 class="card-title">My Stackoverflow Profile</h5>
 			<a href="http://stackoverflow.com/users/2688545/michael">
 				<img src="http://stackoverflow.com/users/flair/2688545.png?theme=clean" width="208" height="58" alt="profile for michael at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for michael at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 			</a>
