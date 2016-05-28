@@ -32,8 +32,10 @@ body {
 		text-align:center;
 		
 		.card-title {
-			@include card-title-background();
-			padding: 3em;
+			background-image: url(../assets/img/essaouira.png);
+			background-size: cover;
+			height: 150px;
+			background-position-y: 0;
 		}
 		
 		img {
@@ -51,7 +53,7 @@ body {
 		.card-title {
 			@include card-title-background();
 		    color:white;
-			padding: 0.5em 2em 2em 0.5em;
+			padding: 0.5em;
 		}
 	
 		h5 {
