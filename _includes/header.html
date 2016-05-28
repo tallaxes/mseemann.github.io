@@ -8,12 +8,12 @@
      		<a class="nav-link" href="{{ site.baseurl }}/">Home</a>
    	 	</li>
    		  
-         {% for my_page in site.pages %}
-           {% if my_page.title %}
-		   <li class="nav-item {% if page.url == my_page.url  %}active{% endif %}">
-           		<a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}"> {{ my_page.title }}</a>
+         {% for node in site.pages %}
+		 {% unless node.exclude %}
+		   <li class="nav-item {% if page.url == node.url  %}active{% endif %}">
+           		<a class="nav-link" href="{{ node.url | prepend: site.baseurl }}"> {{ node.title }}</a>
 		   </li>
-           {% endif %}
+		   {% endunless %}
          {% endfor %}
 		 
       </ul>
