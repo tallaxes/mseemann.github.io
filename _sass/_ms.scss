@@ -1,6 +1,7 @@
 body {
 	padding-top: 5em;
 	background-color: $background-color;
+    font-weight:300;
 }
 
 .ms-navbar {
@@ -18,8 +19,22 @@ body {
 }
 
 .card {
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-	font-weight: 300;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);  
+}
+
+.github-repo {
+
+	.card-title {
+		background: #00d2ff; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, lighten($brand-primary, 20%) , $brand-primary); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, lighten($brand-primary, 20%) , $brand-primary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	    color:white;
+		padding: 0.5em 2em 2em 0.5em;
+	}
+	
+	h5 {
+		font-weight:300;
+	}
 }
 
 .card-subtitle {
@@ -28,4 +43,12 @@ body {
 .card-text {
 	font-size: smaller;
 	opacity: 0.75;
+}
+.meta-info {
+	cursor:pointer;
+	padding:0.25em;
+	
+	&:first-child {
+		padding-left:0;
+	}
 }

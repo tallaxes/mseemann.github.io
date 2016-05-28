@@ -5,32 +5,39 @@ layout: default
 <div class="row">
 
 	<div class="col-md-8">
-  <h1 class="page-heading">Posts</h1>
+  <h5>Posts</h5>
 
-  <ul class="post-list">
+  <div class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <div class="card">
+		  <div class="card-block">
+			 <div class="card-title">
+				 {{ post.title }}
+				</div>
+			<div class="card-text">
+				{{ post.excerpt}}
+			</div>
+        	  <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+          		<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
+		</div>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 </div>
 
 <div class="col-md-4">
-            {% include sidebar-popular-repo.html %}
+
+    {% include sidebar-popular-repo.html %}
 			
-<div class="card">
-	<div class="card-block">
-		<h5 class="card-title">My Stackoverflow Profile</h5>
+	<div class="card">
+		<div class="card-block">
+			<h5 class="card-title">My Stackoverflow Profile</h5>
 			<a href="http://stackoverflow.com/users/2688545/michael">
-			<img src="http://stackoverflow.com/users/flair/2688545.png?theme=clean" width="208" height="58" alt="profile for michael at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for michael at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+				<img src="http://stackoverflow.com/users/flair/2688545.png?theme=clean" width="208" height="58" alt="profile for michael at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for michael at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
 			</a>
+		</div>
 	</div>
-</div>
 </div>
 </div>
 
