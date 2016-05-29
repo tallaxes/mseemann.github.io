@@ -18,6 +18,9 @@ body {
 	text-align:right;
 }
 
+.pull-right {
+	float:right;
+}
 @mixin card-title-background {
 	background: #00d2ff; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, lighten($brand-primary, 20%) , $brand-primary); /* Chrome 10-25, Safari 5.1-6 */
@@ -38,6 +41,9 @@ body {
 			background-position-y: 0;
 		}
 		
+		.card-text {
+			padding: 0.25em 1.25em 1.25em 1.25em;
+		}
 		img {
 			max-width: 100px;
 			margin-top: -70px;

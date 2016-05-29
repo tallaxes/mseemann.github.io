@@ -1,5 +1,5 @@
 <h5>GitHub</h5>
-{% if site.github.public_repositories %}
+{% if site.github.public_repositories != false %}
 {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse | where: "fork", "false" %}
 {% for repo in sorted_repos | limit: site.side_bar_repo_limit %}
 <div class="card github-repo">
