@@ -36,10 +36,9 @@ $grey-color:				#828282;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-		"../bower_components/bootstrap/scss/bootstrap",
-		"../bower_components/bootstrap/scss/bootstrap-grid",
-        "defaults",
-		"syntax-highlighting",
-		"ms"
+  "../bower_components/bootstrap/scss/bootstrap",
+  "../bower_components/bootstrap/scss/bootstrap-grid",
+  "syntax-highlighting",
+  "ms"
 ;
 

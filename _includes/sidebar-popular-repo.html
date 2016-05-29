@@ -3,39 +3,30 @@
 {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse | where: "fork", "false" %}
 {% for repo in sorted_repos | limit: site.side_bar_repo_limit %}
 <div class="card github-repo">
-	<div class="card-block">
-
-		<div class="card-title">
-			<h5>{{ repo.name }}</h5>
-			<div class="card-text text-right">
-	            <span data-toggle="tooltip" class="meta-info" title="{{ repo.stargazers_count }} stars">
-	                <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}
-	            </span>
-	            <span data-toggle="tooltip" class="meta-info" title="{{ repo.forks_count }} forks">
-	                <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
-	            </span>
-	            <span data-toggle="tooltip" class="meta-info" title="Last updated：{{ repo.updated_at }}">
-	                <span class="octicon octicon-clock"></span>
-	                <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at }}">{{ repo.updated_at | date: '%Y-%m-%d' }}</time>
-	            </span>
-			</div>
-		</div>
-		<div class="card-subtitle text-primary">{{repo.language}}</div>
-		<div class="card-subtitle">{{ repo.description }}</div>
-
-
-		
-
-	
-        
-		<div class="row text-right">
-			<div class="col-md-12">
-				<a href="{{ repo.html_url }}" class="btn btn-default" target="_blank">View on GitHub</a>
-			</div>
-		</div>
-		
-
-	</div>
+  <div class="card-block">
+    <div class="card-title">
+      <h5>{{ repo.name }}</h5>
+      <div class="card-text text-right">
+        <span data-toggle="tooltip" class="meta-info" title="{{ repo.stargazers_count }} stars">
+          <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}
+        </span>
+        <span data-toggle="tooltip" class="meta-info" title="{{ repo.forks_count }} forks">
+          <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
+        </span>
+        <span data-toggle="tooltip" class="meta-info" title="Last updated：{{ repo.updated_at }}">
+          <span class="octicon octicon-clock"></span>
+          <time datetime="{{ repo.updated_at }}" title="{{ repo.updated_at }}">{{ repo.updated_at | date: '%Y-%m-%d' }}</time>
+        </span>
+      </div>
+    </div>
+    <div class="card-subtitle text-warning">{{repo.language}}</div>
+    <div class="card-subtitle">{{ repo.description }}</div>
+    <div class="row text-right">
+      <div class="col-md-12">
+        <a href="{{ repo.html_url }}" class="btn btn-default" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </div>
 </div>
 {% endfor %}
 {% endif %}
