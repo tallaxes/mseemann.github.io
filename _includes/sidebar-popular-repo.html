@@ -6,7 +6,7 @@
   <div class="card-block">
     <div class="card-title">
       <h5>{{ repo.name }}</h5>
-      <div class="card-text text-right">
+      <div class="card-text text-xs-right">
         <span data-toggle="tooltip" class="meta-info" title="{{ repo.stargazers_count }} stars">
           <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}
         </span>
@@ -21,7 +21,7 @@
     </div>
     <div class="card-subtitle text-warning">{{repo.language}}</div>
     <div class="card-subtitle">{{ repo.description }}</div>
-    <div class="row text-right">
+    <div class="row text-xs-right">
       <div class="col-md-12">
         <a href="{{ repo.html_url }}" class="btn btn-default" target="_blank">View on GitHub</a>
       </div>
