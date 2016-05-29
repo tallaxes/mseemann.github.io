@@ -77,12 +77,13 @@ body {
 		h5 {
 			font-weight:300;
 		}
+    
+    .github-language {
+      font-weight: 400;
+    }
 	}
 }
 
-.card-subtitle {
-	opacity: 0.75;
-}
 .card-text {
 	font-size: smaller;
 	opacity: 0.75;
