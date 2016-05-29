@@ -4,9 +4,7 @@
     <div class="row">
       
       <div class="col-md-6">
-        {% if site.github_username %}
         <div>{% include icon-github.html username=site.github_username %}</div>
-        {% endif %}
       </div>
       <div class="col-md-6 text-xs-right">
         <a href="/imprint">Imprint</a>
@@ -25,7 +23,12 @@
           
           // make a card clickable
           $('[card-href]').on('click', function(){
-            location.href = $(this).attr('card-href');
+            var target = $(this).attr('target');
+            if(target){
+              window.open($(this).attr('card-href'), target);
+            } else {
+              location.href = $(this).attr('card-href');
+            }
           });
       });
   </script>
