@@ -28,13 +28,6 @@ body {
 	border-color: darken($brand-primary, 10%);
 }
 
-.text-right {
-	text-align:right;
-}
-
-.pull-right {
-	float:right;
-}
 @mixin card-title-background {
 	background: #00d2ff; /* fallback for old browsers */
 	background: -webkit-linear-gradient(to left, lighten($brand-primary, 20%) , $brand-primary); /* Chrome 10-25, Safari 5.1-6 */

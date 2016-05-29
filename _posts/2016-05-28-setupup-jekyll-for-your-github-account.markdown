@@ -10,3 +10,7 @@ tags:
 ---
 
 to be written...
+
+- setup your own domain name
+  - CNAME
+  - DNS A-Record URL: https://help.github.com/articles/setting-up-an-apex-domain/
