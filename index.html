@@ -3,25 +3,15 @@ layout: default
 ---
 <div class="row">
   <div class="col-md-8">
+    
+    <div class="hidden-md-up"> {% include start-profile.html %} </div>
+    
     {% include post-list.html %}
   </div>
   
   <div class="col-md-4">
     
-    <div class="card profile">
-      <div class="card-title">
-        
-      </div>
-      <img src="{{site.github.owner_gravatar_url}}">
-      <h5>{{ site.title }} </h5>
-      <div class="card-subtitle">{{site.sub_title}}</div>
-      <div class="card-text">
-        {% for key_word in site.key_words %}
-        {{key_word}}
-        {% if forloop.last != true %}|{% endif %}
-        {% endfor %}
-      </div>
-    </div>
+    <div class="hidden-sm-down">{% include start-profile.html %}</div>
     
     {% include sidebar-popular-repo.html %}
 			

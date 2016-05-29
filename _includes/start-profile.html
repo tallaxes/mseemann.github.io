@@ -1,0 +1,14 @@
+<div class="card profile">
+  <div class="card-title">
+    
+  </div>
+  <img src="{{site.github.owner_gravatar_url}}">
+  <h5>{{ site.title }} </h5>
+  <div class="card-subtitle">{{site.sub_title}}</div>
+  <div class="card-text">
+    {% for key_word in site.key_words %}
+    {{key_word}}
+    {% if forloop.last != true %}|{% endif %}
+    {% endfor %}
+  </div>
+</div>
