@@ -6,7 +6,8 @@ layout: default
 
     <div class="post-list">
       {% for post in site.posts %}
-      <div class="card">
+
+      <div class="card" card-href="{{ post.url | prepend: site.baseurl }}">
         <div class="card-block">
           <div class="card-title">
             <h5>{{ post.title }}</h5>
@@ -19,6 +20,7 @@ layout: default
           <a class="pull-right" href="{{ post.url | prepend: site.baseurl }}">Read more...</a>
         </div>
       </div>
+
       {% endfor %}
     </div>
 

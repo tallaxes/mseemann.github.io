@@ -20,7 +20,13 @@
   
   <script>
       $(function(){
-          $("body").tooltip({ selector: '[data-toggle=tooltip]' });
+          // activate the tooltips 
+          $('body').tooltip({ selector: '[data-toggle=tooltip]' });
+          
+          // make a card clickable
+          $('[card-href]').on('click', function(){
+            location.href = $(this).attr('card-href');
+          });
       });
   </script>
 

@@ -41,6 +41,11 @@ body {
 	background: linear-gradient(to left, lighten($brand-primary, 20%) , $brand-primary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	
 }
+
+[card-href]{
+  cursor:pointer;
+}
+
 .card {
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);  
 	
@@ -60,7 +65,7 @@ body {
 		}
 		img {
 			max-width: 100px;
-			margin-top: -70px;
+			margin-top: -90px;
 			margin-bottom: 5px;
 			border: 3px solid #fff;
 			border-radius: 100%;

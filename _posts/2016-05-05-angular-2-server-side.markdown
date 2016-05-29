@@ -10,7 +10,9 @@ tags:
   - dependency injection
 ---
 
-A main feature of [Angular 2][angular2]{:target="_blank"} is the separation of dom rendering from the rest. This makes it possible to use Angular 2 code on the serverside.
+A main feature of [Angular 2][angular2]{:target="_blank"} is the separation of dom rendering from the rest of the framework. That makes it possible to use Angular 2 code on the serverside. 
+
+to be continued...
 
 {% highlight javascript %}
 
