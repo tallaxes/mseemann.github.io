@@ -1,4 +1,6 @@
-<h5>GitHub</h5>
+<h5 class="pull-xs-left">GitHub</h5> 
+<div class="pull-xs-right">{% include icon-github.html username=site.github_username %}</div>
+<div class="clearfix"></div>
 {% if site.github.public_repositories != false %}
 {% assign sorted_repos = (site.github.public_repositories | sort: 'stargazers_count') | reverse | where: "fork", "false" %}
 {% for repo in sorted_repos | limit: site.side_bar_repo_limit %}
