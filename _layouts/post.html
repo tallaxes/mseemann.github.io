@@ -1,19 +1,23 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <article itemscope itemtype="http://schema.org/BlogPosting">
   
-  <header>
-    <h1 itemprop="name headline">{{ page.title }}</h1>
-    <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
-    <p>
-      {% for tag in page.tags %}
-      <span class="label label-primary">{{tag}}</span>
-      {% endfor %}
-    </p>
-  </header>
+      <header>
+        <h1 itemprop="name headline">{{ page.title }}</h1>
+        <p><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+        <p>
+          {% for tag in page.tags %}
+          <span class="label label-primary">{{tag}}</span>
+          {% endfor %}
+        </p>
+      </header>
   
-  <div class="post-content" itemprop="articleBody">{{ content }}</div>
+      <div itemprop="articleBody">{{ content }}</div>
 
-</article>
+    </article>
+  </div>
+</div>
 

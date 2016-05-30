@@ -25,7 +25,7 @@ url: "http://mseemann.github.io/" # the base hostname & protocol for your site
 github_username:  mseemann
 github_url: https://github.com/mseemann
 repository: mseemann
-
+excerpt_separator: <!-- more -->
 # Build settings
 markdown: kramdown
 
