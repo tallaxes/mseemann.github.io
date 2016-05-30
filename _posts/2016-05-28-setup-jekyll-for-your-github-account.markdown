@@ -41,6 +41,6 @@ Now you need to commit and push your new website in your gitHub repository and a
 To make the things perfect it would be nice to publish this website under your own domain. This is also possible. You need to create a `CNAME` file in your repository. This is a simple text file that must contain the domain name under which you want to access your website. After that you need to configure the DNS A record for your website. The ip adresses you need to use is documented here: [DNS A-Record configuration][github_dns]{:target="_blank"}. Thats it! Your website is now avaialable under your own domain for free.
 
   
-[github_pages]: https://https://pages.github.com/.io
+[github_pages]: https://pages.github.com/
 [jekyll]: https://github.com/jekyll/jekyll
 [github_dns]:https://help.github.com/articles/setting-up-an-apex-domain/
