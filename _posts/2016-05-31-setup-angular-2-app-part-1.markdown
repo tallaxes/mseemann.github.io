@@ -7,7 +7,7 @@ tags:
   - angular 2
   - angualr cli
   - GitHub
-  - TravicCI
+  - Travis-CI
 ---
 
 In this post I'll describe how you can setup continuous integration for an angular 2 app that is hosted on github with [Travic-CI][travis-ci]{:target="_blank"}, [Coveralls][coveralls]{:target="_blank"} and [Sauce Labs][saucelabs]{:target="_blank"}. After that you have a nearly complete pipeline for your agile project. I am using [roamlrs][roamlrs]{:target="_blank"} as an example project.

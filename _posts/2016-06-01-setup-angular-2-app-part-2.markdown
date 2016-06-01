@@ -8,7 +8,7 @@ tags:
   - karma
   - coveralls
   - GitHub
-  - TravicCI
+  - Travis-CI
 ---
 
 In the first part of this series we have seen how to run our tests on [Travis-CI][travis-ci]{:target="_blank"}. This is great because we now know when our code is broken. But we don't know how much of our code is covered by our tests. In this part we'll going to add coverage reporting for our tests.
