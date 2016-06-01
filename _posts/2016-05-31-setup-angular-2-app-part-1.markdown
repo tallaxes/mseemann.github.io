@@ -10,7 +10,7 @@ tags:
   - Travis-CI
 ---
 
-In this post I'll describe how you can setup continuous integration for an angular 2 app that is hosted on github with [Travic-CI][travis-ci]{:target="_blank"}, [Coveralls][coveralls]{:target="_blank"} and [Sauce Labs][saucelabs]{:target="_blank"}. After that you have a nearly complete pipeline for your agile project. I am using [roamlrs][roamlrs]{:target="_blank"} as an example project.
+In this post I'll describe how you can setup continuous integration for an angular 2 app that is hosted on github with [Travis-CI][travis-ci]{:target="_blank"}, [Coveralls][coveralls]{:target="_blank"} and [Sauce Labs][saucelabs]{:target="_blank"}. After that you have a nearly complete pipeline for your agile project. I am using [roamlrs][roamlrs]{:target="_blank"} as an example project.
 
 To get started you need to create a GitHub repository that you have initialized with ng init from the [Angular CLI][angular-cli]{:target="_blank"} project. How to do this is described on the Agular CLI website so I leave it up to you following they're instructions.
 
@@ -18,7 +18,7 @@ To get started you need to create a GitHub repository that you have initialized 
 
 The first thing we want to do is running our builds at [Travis-CI][travis-ci] after every commit to the master branch. To achieve this we need to create a `.travis.yml` file in our repository and connect our GitHub account with Travis-CI.
 
-Connect your GitHub account with your Travic-CI account is very easy. Navigate to [Travis-CI][travis-ci]{:target="_blank"} and sign in with your GutHub-Account. After that you need to give Travis-CI read access to your GitHub repositories and just need to activate the repositories for which you want to setup automatic builds.
+Connect your GitHub account with your Travis-CI account is very easy. Navigate to [Travis-CI][travis-ci]{:target="_blank"} and sign in with your GutHub-Account. After that you need to give Travis-CI read access to your GitHub repositories and just need to activate the repositories for which you want to setup automatic builds.
 
 The next step is to configure how Travis-CI should build your code and run your unit tests. This is done by the `.travis.yml` file. The generated project uses Chrome to run our test so we need to install Chrome before we run our tests. You'll find a detailed description how to do that in this [blog post][travis-ci-chrome]{:target="_blank"}. Because Chrome needs a newer ubuntu version than Travis-CI provides by default we need to configure [trusty][travis-trusty]{:target="_blank"} as the runtime environment.
 
