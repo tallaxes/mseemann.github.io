@@ -5,7 +5,7 @@ date:   2016-05-31 13:41:26 +0200
 categories: frontend
 tags: 
   - angular 2
-  - angualr cli
+  - angular cli
   - GitHub
   - Travis-CI
 ---
