@@ -19,7 +19,10 @@
   <script>
       $(function(){
           // activate the tooltips 
-          $('body').tooltip({ selector: '[data-toggle=tooltip]' });
+          if(!window.Touch){
+             $('body').tooltip({ selector: '[data-toggle=tooltip]' });
+           }
+        
           
           // make a card clickable
           $('[card-href]').on('click', function(){
