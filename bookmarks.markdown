@@ -15,3 +15,7 @@ permalink: /bookmarks/
 
 * [Angular](https://angularjs.org/){:target="_blank"}
 * [Angular Material](https://material.angularjs.org/latest/){:target="_blank"}
+
+### Tools
+
+* [Favicon generator](http://realfavicongenerator.net/){:target="_blank"}
