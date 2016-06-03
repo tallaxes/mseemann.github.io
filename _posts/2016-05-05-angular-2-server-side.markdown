@@ -18,7 +18,7 @@ In this post I'll provide an example how to use angulars dependency injection fr
 
 <!-- more -->
 
-To get started with angular 2 on the server side you need to import some 3rd party libs. In my case I am using TypeScript, ES6 and ES7 features that are not already present in node.js. At least the following imports are neseccary for angular 2.0:
+To get started with angular 2 on the server side you need to import some 3rd party libs. In my case I am using TypeScript, ES6 and ES7 features that are not already present in node.js. At least the following imports are necessary for angular 2.0:
 
 ```javascript
 
@@ -34,7 +34,7 @@ If you have done this you need to import some classes from the angular 2 core:
 import { ReflectiveInjector, provide, Type, Provider } from 'angular2/core';
 ```
 
-Now we can setup all providers we want to use. Please have a look at [this excelent blog post][angular2-di]{:target="_blank"} for a detailed description how you can configure your providers.
+Now we can setup all providers we want to use. Please have a look at [this excellent blog post][angular2-di]{:target="_blank"} for a detailed description how you can configure your providers.
 
 ```javascript
 
@@ -96,7 +96,7 @@ export class LandingPage {
 }
 ```
 
-An instance of this class needs to be registered. But we do not instanciate this class by our self. The angular injector is responsible to create an instance of the services and hook up the required dependencies.
+An instance of this class needs to be registered. But we do not instantiate this class by our self. The angular injector is responsible to create an instance of the services and hook up the required dependencies.
 
 ```javascript
 

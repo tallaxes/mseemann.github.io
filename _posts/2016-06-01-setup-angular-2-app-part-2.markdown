@@ -16,7 +16,7 @@ In the first part of this series we have seen how to run our tests on [Travis-CI
 <!-- more -->
 Before we get started some thoughts about testcoverage:
 
-- Our code is written in TypeScript and gets transpiled to JavaScript before we run the tests by karma. So we'll see the coverage of the JavaScript code not the TypeScript code. You'll notice that it is really easy to understand which part of your code is not perfectly covered by your test but reaching a 100% test coverage may be difficult to reach because of a litte bit of meta code that is added by the transpiler (for example the decorator code).
+- Our code is written in TypeScript and gets transpiled to JavaScript before we run the tests by karma. So we'll see the coverage of the JavaScript code not the TypeScript code. You'll notice that it is really easy to understand which part of your code is not perfectly covered by your test but reaching a 100% test coverage may be difficult to reach because of a little bit of meta code that is added by the transpiler (for example the decorator code).
 - We only want to know how much of our app code is tested not how much of the testcode has been run. So we need to exclude all *.spec.js files from our coverage measurement.
 
 To add test coverage reporting to our Angular 2 app we need two additional npm modules:
@@ -26,7 +26,7 @@ npm install karma-coverage karma-coveralls --save-dev
 ```
 The module `karma-coverage` is responsible for code instrumentation and coverage reporting. After the reports have been written to the filesystem the module `karma-coveralls` will help us to transmit the report to [Coveralls][coveralls]{:target="_blank"}.
 
-After these modules have been intsalled we need to customize our karma configuration. You'll find the configuration in `config/karma.conf.js`. First of all we need to require the module `karma-coverage` in the plugins array: `require('karma-coverage')`.
+After these modules have been installed we need to customize our karma configuration. You'll find the configuration in `config/karma.conf.js`. First of all we need to require the module `karma-coverage` in the plugins array: `require('karma-coverage')`.
 
 The next step is to configure a pre process step:
 
@@ -46,7 +46,7 @@ coverageReporter: {
     ]
 },
 ```
-If we now run `ng test --watch false` we'll find the reports in the `coverage` folder. The complete `karma.conf.js` file can befound [here](https://github.com/roamlrs/roamlrs/blob/538288a4b188154ed950455295a19eaf5210ede0/config/karma.conf.js){:target="_blank"}.
+If we now run `ng test --watch false` we'll find the reports in the `coverage` folder. The complete `karma.conf.js` file can be found [here](https://github.com/roamlrs/roamlrs/blob/538288a4b188154ed950455295a19eaf5210ede0/config/karma.conf.js){:target="_blank"}.
 
 To get a nice report view and a badge for our GitHub project we need to transfer the coverage results to Coveralls. To achieve this we need to modify the `.travis.yml` file and add some script code after the build/test has finished. With help from the `karma-coveralls` module two lines of code are enough:
 
@@ -54,11 +54,11 @@ To get a nice report view and a badge for our GitHub project we need to transfer
 after_script:
   - cat ./coverage/*/lcov.info | ./node_modules/coveralls/bin/coveralls.js
 ``` 
-For sure we need an account at Coveralls. This is also very easy. Just login with your GitHub account, grant access to Coveralls and activate Caveralls for the desired project.
+For sure we need an account at Coveralls. This is also very easy. Just login with your GitHub account, grant access to Coveralls and activate Coveralls for the desired project.
 
 Done!
 
-Now we cann ad our second badge to our Angualr 2 app:
+Now we can ad our second badge to our Angular 2 app:
 
 ```
 [![Coverage Status](https://coveralls.io/repos/github/roamlrs/roamlrs/badge.svg?branch=master)]

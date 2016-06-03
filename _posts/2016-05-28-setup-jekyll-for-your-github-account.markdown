@@ -14,11 +14,11 @@ May be you have heard about [GuthubPages][github_pages]{:target="_blank"}. If no
 First of all you need to create a GitHub repository with a name that will match your GitHub Pages website url. My github username is mseemann. So the name of the repository must be `mseemann.github.io`. Every file that is present in this repository will be part of your
 website. Try it out and create a simple `index.html` in your repository, commit, push and access your website `http://[username].github.io`. 
 <!-- more -->
-Ok that works. But this is not perfect. You have to do a lot of things manually or generate your website with a seperate content 
+Ok that works. But this is not perfect. You have to do a lot of things manually or generate your website with a separate content 
 management system. A content management system that is a real timesaver for developers is [jekyll][jekyll]{:target="_blank"}. You can write your pages in markdown, you can work with templates and you may extend the capabilities of the cms with plugins. GitHub Pages supports jekyll 
 out of the box.
 
-To get startet with jekyll you need to install jekyll by gem:
+To get started with jekyll you need to install jekyll by gem:
 
 ```bash
 gem install jekyll
@@ -36,9 +36,9 @@ jekyll serve
 and point your browser to `http://localhost:4000`. Any changes you now make in your sources will be regenerate your website immediately and
 is instantly available under `http://localhost:4000`.
 
-Now you need to commit and push your new website in your gitHub repository and a few seconds later the content is abvailable under  `http://[username].github.io`.
+Now you need to commit and push your new website in your gitHub repository and a few seconds later the content is available under  `http://[username].github.io`.
 
-To make the things perfect it would be nice to publish this website under your own domain. This is also possible. You need to create a `CNAME` file in your repository. This is a simple text file that must contain the domain name under which you want to access your website. After that you need to configure the DNS A record for your website. The ip adresses you need to use is documented here: [DNS A-Record configuration][github_dns]{:target="_blank"}. Thats it! Your website is now avaialable under your own domain for free.
+To make the things perfect it would be nice to publish this website under your own domain. This is also possible. You need to create a `CNAME` file in your repository. This is a simple text file that must contain the domain name under which you want to access your website. After that you need to configure the DNS A record for your website. The ip addresses you need to use is documented here: [DNS A-Record configuration][github_dns]{:target="_blank"}. Thats it! Your website is now available under your own domain for free.
 
   
 [github_pages]: https://pages.github.com/

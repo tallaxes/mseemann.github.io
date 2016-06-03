@@ -12,7 +12,7 @@ tags:
 
 In this post I'll describe how you can setup continuous integration for an angular 2 app that is hosted on github with [Travis-CI][travis-ci]{:target="_blank"}, [Coveralls][coveralls]{:target="_blank"} and [Sauce Labs][saucelabs]{:target="_blank"}. After that you have a nearly complete pipeline for your agile project. I am using [roamlrs][roamlrs]{:target="_blank"} as an example project.
 
-To get started you need to create a GitHub repository that you have initialized with ng init from the [Angular CLI][angular-cli]{:target="_blank"} project. How to do this is described on the Agular CLI website so I leave it up to you following they're instructions.
+To get started you need to create a GitHub repository that you have initialized with ng init from the [Angular CLI][angular-cli]{:target="_blank"} project. How to do this is described on the Angular CLI website so I leave it up to you following they're instructions.
 
 <!-- more -->
 
@@ -46,7 +46,7 @@ before_install:
  - sudo dpkg -i google-chrome*.deb
 ```
 
-If we commit and push our changes to our master branch Travis-CI should grab our sources from GitHub and start buildung and testing our app. But we'll see that the build never stops. The reason is that in the `package.json` of our project the script `test` runs `ng test`. This command will wait for any changes in our sources to rerun the test. A perfect solution for our local test but really a bad one for our Travis-CI build. To solve this we need to change the command from `ng test` to `ng test --watch false`. Commit, push and we are done.
+If we commit and push our changes to our master branch Travis-CI should grab our sources from GitHub and start building and testing our app. But we'll see that the build never stops. The reason is that in the `package.json` of our project the script `test` runs `ng test`. This command will wait for any changes in our sources to rerun the test. A perfect solution for our local test but really a bad one for our Travis-CI build. To solve this we need to change the command from `ng test` to `ng test --watch false`. Commit, push and we are done.
 
 The first step is done. One last thing: let visitors of our GitHub project know that our build passes. Usually the build-badge is included in our readme.md file:
 

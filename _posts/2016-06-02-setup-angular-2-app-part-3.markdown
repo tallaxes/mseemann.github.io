@@ -12,7 +12,7 @@ tags:
 ---
 The previous two parts of this series covered how to setup the build process with [Travis-CI][travis-ci]{:target="_blank"} and how we can publish our test coverage on [Coveralls][coveralls]{:target="_blank"}.
 
-This post covers how to setup the e2e testing for our project. We will use [Sauce Labs][saucelabs]{:target="_blank"} for our e2e testing. You'll need at least a test account to get started without any fees. If you have an open source project you may create an account on [Open Sacue][opensauce]{:target="_blank"} it's also free with unlimited testing time.
+This post covers how to setup the e2e testing for our project. We will use [Sauce Labs][saucelabs]{:target="_blank"} for our e2e testing. You'll need at least a test account to get started without any fees. If you have an open source project you may create an account on [Open Sauce][opensauce]{:target="_blank"} it's also free with unlimited testing time.
 
 
 <!-- more -->
@@ -22,7 +22,7 @@ The first problem we need to solve is where should our app be published so that 
 
 To run this task during the Travis-CI build we need to make sure that `git` commands during the build have access to our GitHub repository. There are a lot of ways to achieve this. I'll present here a simple straight forward way to solve this problem.
 
-First of all we need an access token for our GitHub project. An access token can be created from your profile/settings page ([https://github.com/settings/tokens](https://github.com/settings/tokens){:target="_blank"}). This token needs to be set as an environment variable `github_token` for our Travic-CI project.
+First of all we need an access token for our GitHub project. An access token can be created from your profile/settings page ([https://github.com/settings/tokens](https://github.com/settings/tokens){:target="_blank"}). This token needs to be set as an environment variable `github_token` for our Travis-CI project.
 
 After that we must create a `.netrc` file in the users home directory and tell the system that it should use a specific username and password for any access to github.com. The script will be:
 
@@ -53,7 +53,7 @@ After the commit and push to GitHub Travis-CI will now build our app and at the 
 
 ### Run e2e tests with protractor
 
-Now we need to configure [Protractor][protractor]{:target="_blank"}. Protractor is the swiss knife for e2e testing for angular apps. Angualr CLI has created a complete configuration for us but the generated one is only suitable for local test with a single browser. So we create a new `protractor.sauce.conf.js` file in the `config`folder:
+Now we need to configure [Protractor][protractor]{:target="_blank"}. Protractor is the swiss knife for e2e testing for angular apps. Angular CLI has created a complete configuration for us but the generated one is only suitable for local test with a single browser. So we create a new `protractor.sauce.conf.js` file in the `config`folder:
 
 ```javascript
 /*global jasmine */
@@ -99,9 +99,9 @@ exports.config = {
 ```
 Some notes about the changes:
 
-- The `buildNumber` is initialized with the bild number from Travis-CI. So build and Sauce Labs test runs are connected to investigate potential problems.
-- The original `protractor.conf.js` file uses the TypeScript sources to run the tests. For now this only works with one browser - but we want to test against multiple browswers. To makes this possible we need to compile the `*.ts`files into JavaScript. This must be done before the e2e tests are performed: `tsc --project e2e`. The output is written to `/tmp/e2e` (have a look at tsconfig.json `"outDir": "../tmp/e2e"`).
-- To tell protractor to use Sauce Lab we need to add `sauceUser`and `sauceKey` to the config file. The values are readed from the Travis-CI environment. You'll find these information in you Sauce Labs account settings.
+- The `buildNumber` is initialized with the build number from Travis-CI. So build and Sauce Labs test runs are connected to investigate potential problems.
+- The original `protractor.conf.js` file uses the TypeScript sources to run the tests. For now this only works with one browser - but we want to test against multiple browsers. To makes this possible we need to compile the `*.ts`files into JavaScript. This must be done before the e2e tests are performed: `tsc --project e2e`. The output is written to `/tmp/e2e` (have a look at tsconfig.json `"outDir": "../tmp/e2e"`).
+- To tell protractor to use Sauce Lab we need to add `sauceUser`and `sauceKey` to the config file. The values are read from the Travis-CI environment. You'll find these information in you Sauce Labs account settings.
 - In the array `multiCapabilities` we can specify on which browsers our tests should be processed. To add more configurations we can use the [Sauce Labs platform configurator][plattformconfigurator]{:target="_blank"}.
 
 ### Run the e2e tests in the last build step
