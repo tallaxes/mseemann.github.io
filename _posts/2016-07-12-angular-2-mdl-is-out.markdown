@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The first release candidate of Angular 2 Material Design Lite (mdl) is out"
+title:  "The first release candidate of Angular 2 Material Design Lite (angular2-mdl) is out"
 date:   2016-07-12 18:30:26 +0200
 categories: frontend
 tags: 
