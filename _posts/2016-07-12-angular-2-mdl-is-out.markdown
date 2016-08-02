@@ -7,7 +7,7 @@ tags:
   - angular 2
   - Material Design Lite
 ---
-The first release candidate of my angular 2 component library has been released. This library provides components and directives that can be used in angular 2. The comppnents are based on material design lite (see [getmdl.io][getmdl]{:target="_blank"} for more information about this ui framework).
+The first release candidate of my angular 2 component library has been released ([demo][angular2-mdl-demo]{:target="_blank"} [github][mdl2-github]{:target="_blank"}). This library provides components and directives that can be used in angular 2. The comppnents are based on material design lite (see [getmdl.io][getmdl]{:target="_blank"} for more information about this ui framework).
 
 This post covers why i have written such a component library, how to use it and what components are offered by this npm module.
 
@@ -163,3 +163,4 @@ My next steps are: polish the api and components/directive selectors and extend 
 [getmdl-config]:https://getmdl.io/customize/index.html
 [material2]: https://github.com/angular/material2
 [angular2-mdl-demo]:http://www.mseemann.de/angular2-mdl/
+[mdl2-github]:https://github.com/mseemann/angular2-mdl
