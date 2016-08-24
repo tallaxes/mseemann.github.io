@@ -28,6 +28,7 @@ body {
 
 .btn {
 	border-color: darken($brand-primary, 10%);
+  font-size: 0.8rem;
 }
 
 @mixin card-title-background {
@@ -75,6 +76,10 @@ body {
 		    color:white;
 			padding: 0.5em;
 		}
+    
+    .card-subtitle {
+      margin-top:0;
+    }
 	
 		h5 {
 			font-weight:300;
@@ -83,12 +88,15 @@ body {
     .github-language {
       font-weight: 400;
     }
+    
+    .btn {
+      margin-top: 1rem;
+    }
 	}
 }
 
 .card-text {
-	font-size: smaller;
-	opacity: 0.75;
+	font-size: 1.1rem;
 }
 .meta-info {
 	cursor:pointer;

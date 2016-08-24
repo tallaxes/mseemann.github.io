@@ -9,13 +9,13 @@ Michael Seemann
 Hochring 24
 38440 Wolfsburg
 
-Telefon: 05361 6009457
-Telefax: 05361 6009458
-E-Mail: <a title="apps@mseemann.de" href="mailto:apps@mseemann.de">apps</a>
+Telefon: 05361 600945sieben
+Telefax: 05361 600945acht
+E-Mail: apps at mseemann.de
 
 <strong>Umsatzsteuer-ID: </strong>
 Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz:
-DE247811441
+DE247811 vier vier eins
 
 <strong>Verantwortlich für den Inhalt</strong> (gem. § 55 Abs. 2 RStV):
 wie oben
