@@ -58,6 +58,7 @@ body {
 		
 		.card-text {
 			padding: 0.25em 1.25em 1.25em 1.25em;
+      font-size: 1.0rem;
 		}
 		img {
 			max-width: 100px;
@@ -89,15 +90,22 @@ body {
       font-weight: 400;
     }
     
+		.card-text {
+      font-size: 1.0rem;
+		}
+    
     .btn {
       margin-top: 1rem;
     }
 	}
 }
 
-.card-text {
-	font-size: 1.1rem;
+.post-list{
+  .card-text {
+  	font-size: 1.1rem;
+  }  
 }
+
 .meta-info {
 	cursor:pointer;
 	padding:0.25em;
