@@ -13,6 +13,8 @@ This post covers why i have written such a component library, how to use it and 
 
 <!-- more -->
 
+*Update (08/24/2016): angualr2-mdl is finally released and supports now angular 2 (rc5) and material design lite version 1.2.*
+
 ### Why a component library for mdl
 Material design lite was written as a collection of scss files and a little bit of javascript to add dynamic behavior like ripple effects, focus and blur handling and so on. It was not written with a specific javascript framework in mind. And it was also not written to match the needs of dynamic ui generation. So for example: you will not have the possibility to add menu items to a menu after the menu was created.
 
