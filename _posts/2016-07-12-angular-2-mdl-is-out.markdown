@@ -164,5 +164,5 @@ My next steps are: polish the api and components/directive selectors and extend 
 [getmdl]: https://getmdl.io
 [getmdl-config]:https://getmdl.io/customize/index.html
 [material2]: https://github.com/angular/material2
-[angular2-mdl-demo]:http://www.mseemann.de/angular2-mdl/
+[angular2-mdl-demo]:http://mseemann.io/angular2-mdl/
 [mdl2-github]:https://github.com/mseemann/angular2-mdl
