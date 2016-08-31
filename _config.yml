@@ -1,6 +1,6 @@
 
 # Site settings
-title: Michael Seemann
+title: michael seemann
 sub_title: FullStack Developer
 key_words: 
   - AngularJS
@@ -23,7 +23,7 @@ description: >
   about frontend or backend development - i just care about writing apps that people can
   use in the simplest possible way. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://mseemann.github.io/" # the base hostname & protocol for your site
+url: "http://mseemann.io/" # the base hostname & protocol for your site
 github_username:  mseemann
 github_url: https://github.com/mseemann
 repository: mseemann
