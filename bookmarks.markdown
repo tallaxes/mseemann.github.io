@@ -12,6 +12,7 @@ permalink: /bookmarks/
 * [Angular CLI](https://cli.angular.io/){:target="_blank"}
 * [Angular 2 — Unit Testing recipes](https://medium.com/google-developer-experts/angular-2-unit-testing-with-jasmine-defe20421584#.2x8329x3m){:target="_blank"}
 * [Testing Angular 2 apps – Dependency Injection and Components](https://developers.livechatinc.com/blog/testing-angular-2-apps-dependency-injection-and-components/){:target="_blank"}
+* [Collection of Angular2 articles](http://blog.thoughtram.io/angular/2016/09/15/angular-2-final-is-out.html){:target="_blank"} 
 
 ### AngularJS
 
